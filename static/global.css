@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 960px;
+}
+
+nav {
+    box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: black;
+    display: block;
+}
+
+h1 {
+    font-size: 68px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+main {
+    background-color: rgba(232,217,217,.3);
+}
+
+footer {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.head-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, rgb(247, 0, 255), rgb(255, 217, 0));
+}
+
+.head {
+    float: left;
+}
+
+.icon {
+    float: left;
+    width: 20px;
+}
+
+.title {
+    float: left;
+    font-size: 18px;
+    padding-left: 8px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 36px;
+
+}
+
+.nav-sections {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    line-height: 20px;
+}
+
+.nav-section {
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.nav-section > a:hover {
+    color: rgba(211, 0, 0, 0.7);
+}
+
+.mb-intro {
+    width: 100%;
+    height: 600px;
+    padding: 80px 12%;
+    background: transparent;
+}
+
+.mb-intro > p {
+    margin-top: 60px;
+    line-height: 280%;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.mb-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.mb-entry {
+    width: 240px;
+    height: 60px;
+    background-color: rgb(255, 0, 76);
+    color: white;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 18px;
+    text-align: center;
+    letter-spacing: 8px;
+    display: inline-block;
+    margin-right: 40px;
+    box-shadow: 8px 8px 0 rgba(255, 0, 76, .2);
+    transition-duration: .2s;
+}
+
+.mb-entry:hover {
+    box-shadow: none;
+    background-color: rgb(230, 0, 30);
+}
+
+.mb-login {
+    width: 240px;
+    height: 60px;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 18px;
+    text-align: center;
+    letter-spacing: 8px;
+    display: inline-block;
+    margin-left: 40px;
+    transition-duration: .2s;
+}
+
+.mb-login:hover {
+    background-color: rgba(230, 230, 230, .7);
+}
+
+.tools-intro {
+    width: 100%;
+    background-color: #fff;
+    padding: 80px 12%;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+}
+
+.tools-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.tools-links > a {
+    display: block;
+    width: 50%;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.tools-links > a:hover .tools-icon {
+    transform: rotate(360deg);
+}
+
+.tools-icon {
+    width: 24px;
+    margin-right: 20px;
+    vertical-align: middle;
+    transition-duration: .4s;
+}
+
+.tools-links p {
+    display: inline;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: center;
+    transition-duration: .2s;
+}
+
+.tools-btn {
+    width: 400px;
+    height: 68px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 8px 8px 0 rgba(0, 0, 76, .2);;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 4px;
+    padding: 24px;
+    margin: 80px auto 0;
+    transition-duration: .2s;
+}
+
+.tools-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    color: #000;
+}
+
+.decoration {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.discuz-intro {
+    width: 100%;
+    background-color: transparent;
+    padding: 40px 12% 80px;
+}
+
+.discuz-intro > p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+.discuz-sections {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 80px auto 0;
+    width: fit-content;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.discuz-sections > a {
+    border-right: none;
+    width: 60px;
+    height: 160px;
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+
+.discuz-sections > a:hover {
+    width: 240px;
+    color: rgb(230, 0, 30);
+}
+
+.discuz-sections > a > p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(230, 0, 30);
+}
+
+.discuz-btn > a {
+    margin: 40px auto 0;
+    width: 400px;
+    height: 68px;
+    background-color: rgb(255, 0, 76);
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 24px;
+    text-align: center;
+    letter-spacing: 4px;
+    display: block;
+    box-shadow: 8px 8px 0 rgba(255, 0, 76, .2);
+    transition-duration: .2s;
+}
+
+.discuz-btn > a:hover {
+    box-shadow: none;
+    background-color: rgb(230, 0, 30);
+}
+
+.login-intro {
+    width: 100%;
+    height: 440px;
+    background-color: #fff;
+    padding: 80px 12%;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-section {
+    width: 50%;
+    padding: 20px;
+}
+
+.footer-section > p {
+    font-size: 24px;
+    color: rgb(233, 0, 0);
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-left: 80px;
+}
+
+.link-list {
+    width: 100%;
+}
+
+.link-list li {
+    padding: 10px;
+    padding-left: 80px;
+    width: 100%;
+}
+
+.link-list li > a {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.link-list li > a:hover {
+    color: rgba(211, 0, 0, 0.7);
+}
+
+.foot-line {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, rgb(255, 217, 0), rgb(247, 0, 255));
+}
