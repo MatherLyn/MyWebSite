@@ -30,6 +30,12 @@ router.get('/browser.png', handler.loadBrowserIcon)
 
 router.get('/rsa.png', handler.loadRSAIcon)
 
+router.get('/onlineRegExpTest', handler.regTest)
+
+router.get('/checked.png', handler.loadCheckedIcon)
+
+router.get('/unchecked.png', handler.loadUncheckedIcon)
+
 
 // router.get('/section1.jpg', handler.loadsection1img)
 

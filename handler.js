@@ -62,6 +62,18 @@ const techdiscuz = function (request, response) {
     staticPageResponse(response, 'techdiscuz.html')
 }
 
+const regTest = function (request, response) {
+    staticPageResponse(response, 'onlineRegExpTest.html')
+}
+
+const loadCheckedIcon = function (request, response) {
+    staticPageResponse(response, 'checked.png')
+}
+
+const loadUncheckedIcon = function (request, response) {
+    staticPageResponse(response, 'unchecked.png')
+}
+
 
 const handler = {
     index,
@@ -74,7 +86,10 @@ const handler = {
     loadRegIcon,
     loadTranscodeIcon,
     loadBrowserIcon,
-    loadRSAIcon
+    loadRSAIcon,
+    regTest,
+    loadCheckedIcon,
+    loadUncheckedIcon
     // loadsection1img
 }
 

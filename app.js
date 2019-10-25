@@ -14,6 +14,6 @@ const app = express()
 // 路由管理
 app.use(router)
 
-app.listen(80, () => {
+app.listen(config.port, () => {
     console.log(`服务器已启动，请通过 ${config.host}:${config.port} 访问……`)
 })
