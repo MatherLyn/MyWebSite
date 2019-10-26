@@ -12,6 +12,10 @@ router.get('/index', handler.index)
 
 router.get('/login', handler.login)
 
+router.get('/register', handler.register)
+
+router.get('/forgetPassword', handler.forgetPassword)
+
 router.get('/messageboard', handler.messageboard)
 
 router.get('/onlinetools', handler.onlinetools)

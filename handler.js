@@ -50,6 +50,14 @@ const login = function (request, response) {
     staticPageResponse(response, 'login.html')
 }
 
+const register = function (request, response) {
+    staticPageResponse(response, 'register.html')
+}
+
+const forgetPassword = function (request, response) {
+    staticPageResponse(response, 'forgetPassword.html')
+}
+
 const messageboard = function (request, response) {
     staticPageResponse(response, 'messageboard.html')
 }
@@ -78,6 +86,8 @@ const loadUncheckedIcon = function (request, response) {
 const handler = {
     index,
     login,
+    register,
+    forgetPassword,
     messageboard,
     onlinetools,
     techdiscuz,
