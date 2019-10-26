@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./global.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="head-line"></div>
-  <main class="reg-body">
-    <h1>正则表达式在线测试工具</h1>
-    <div class="text">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./global.css">
+    <title>正则表达式在线测试</title>
+  </head>
+
+  <body>
+    <div class="head-line"></div>
+    <main class="reg-body">
+      <h1>正则表达式在线测试工具</h1>
+      <div class="text">
         <textarea placeholder="请在此输入您希望匹配的文本" class="text-input" id="textInput"></textarea>
-    </div>
-    <div class="regexp">
+      </div>
+      <div class="regexp">
         <div class="reg-input">
           <label for="reg" class="regexp-label">正则表达式</label>
           <input type="text" placeholder="请在此输入您编写的正则表达式" class="regexp-input" id="reg">
@@ -28,48 +30,49 @@
           <label for="i" class="request-label"><img src="./unchecked.png">忽略大小写</label>
         </div>
         <button class="test-begin" onclick="testBegin()">开始匹配</button>
-    </div>
-    <div class="output">
+      </div>
+      <div class="output">
         <textarea class="result-output" placeholder="您的输出将在此显示" id="result" disabled="disabled"></textarea>
-    </div>
-  </main>
-  <div class="foot-line"></div>
-</body>
+      </div>
+    </main>
+    <div class="foot-line"></div>
+  </body>
 
-<script>
-  function testBegin () {
-    let textInput = document.querySelector('#textInput').value
-    if (!textInput.length) {
-      document.querySelector('#textInput').value = '请输入非空字符串'
-      return
+  <script>
+    function testBegin() {
+      let textInput = document.querySelector('#textInput').value
+      if (!textInput.length) {
+        document.querySelector('#textInput').value = '请输入非空字符串'
+        return
+      }
+      if (/<script>/.test(textInput)) {
+        document.querySelector('#textInput').value = '细路，唔好乱玩野喔'
+        return
+      }
+      let regExpInput = document.querySelector('#reg').value
+      let g = document.querySelector('#g').checked
+      let i = document.querySelector('#i').checked
+      let flags = 'm'
+      if (g) flags += 'g'
+      if (i) flags += 'i'
+      const result = new RegExp(regExpInput, flags)
+      let tempArray
+      let count = 0
+      let resultArray = []
+      while (tempArray = result.exec(textInput)) {
+        resultArray.push({ value: tempArray[0], index: tempArray.index })
+      }
+      if (!resultArray.length) {
+        document.querySelector('#result').value = '没有匹配'
+        return
+      } else {
+        let output = `共找到 ${resultArray.length} 处匹配，分别为：\n`
+        for (let i = 0; i < resultArray.length; i++) output += `${i + 1}. 值是：${resultArray[i].value}，下标是：${resultArray[i].index}\n`
+        console.log(output)
+        document.querySelector('#result').value = output
+      }
     }
-    if (/<script>/.test(textInput)) {
-      document.querySelector('#textInput').value = '细路，唔好乱玩野喔'
-      return
-    }
-    let regExpInput = document.querySelector('#reg').value
-    let g = document.querySelector('#g').checked
-    let i = document.querySelector('#i').checked
-    let flags = 'm'
-    if (g) flags += 'g'
-    if (i) flags += 'i'
-    const result = new RegExp(regExpInput, flags)
-    let tempArray
-    let count = 0
-    let resultArray = []
-    while (tempArray = result.exec(textInput)) {
-      resultArray.push({ value: tempArray[0], index: tempArray.index })
-    }
-    if (!resultArray.length) {
-      document.querySelector('#result').value = '没有匹配'
-      return
-    } else {
-      let output = `共找到 ${resultArray.length} 处匹配，分别为：\n`
-      for (let i = 0; i < resultArray.length; i++) output += `${i + 1}. 值是：${resultArray[i].value}，下标是：${resultArray[i].index}\n`
-      console.log(output)
-      document.querySelector('#result').value = output
-    }
-  }
 
-</script>
+  </script>
+
 </html>
