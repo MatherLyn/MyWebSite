@@ -43,7 +43,16 @@ const loadRSAIcon = function (request, response) {
 // }
 
 const index = function (request, response) {
-    staticPageResponse(response, 'index.html')
+    fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
+        if (err) {
+            fs.readFile(path.join(__dirname, 'static', 'error.html'), (err, data) => {
+                if (err) throw err
+                response.end(data)
+            })
+        } else {
+            response.end(data)
+        }
+    })
 }
 
 const login = function (request, response) {
