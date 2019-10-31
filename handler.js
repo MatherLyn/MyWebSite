@@ -31,9 +31,11 @@ const loadRegIcon = function (request, response) {
 const loadTranscodeIcon = function (request, response) {
     staticPageResponse(response, 'transcode.png')
 }
+
 const loadBrowserIcon = function (request, response) {
     staticPageResponse(response, 'browser.png')
 }
+
 const loadRSAIcon = function (request, response) {
     staticPageResponse(response, 'rsa.png')
 }
